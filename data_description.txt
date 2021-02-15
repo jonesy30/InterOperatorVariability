@@ -1,0 +1,42 @@
+DATASET DESCRIPTION
+Note: all of this has been taken from a paper which outlines this standard benchmarking test.
+I won't disclose the paper here for fear of skewing the results of the study, but this has been disclosed in the README
+
+POPULATION DESCRIPTION
+Data is 21,139 records of ICU stays in the MIMIC-III dataset, where each record is the first 48 hours of an ICU stay.
+One ICU stay per patient. Exclusions:
+    - ICU transfers
+    - Patients under 18 years old
+    - ICU stays lasting under 48 hours
+Mortality rate in population = 13.26%
+
+VARIABLE DESCRIPTION
+Variables included:
+    "Capillary refill rate",
+    "Diastolic blood pressure",
+    "Fraction inspired oxygen",
+    "Glascow coma scale eye opening",
+    "Glascow coma scale motor response",
+    "Glascow coma scale total",
+    "Glascow coma scale verbal response",
+    "Glucose",
+    "Heart Rate",
+    "Height",
+    "Mean blood pressure",
+    "Oxygen saturation",
+    "Respiratory rate",
+    "Systolic blood pressure",
+    "Temperature",
+    "Weight",
+    "pH"
+
+PROCESSED DATA 
+Each record is a 48 hour snapshot of the 17 variables described above.
+    - The 17 variables have been discretized to make 76 columns in each sample
+This is stored as a 2D array of size (48 * 76) for each sample
+Each sample has been standardized
+
+Train/test/validation split (size):
+    - train = 14 681 samples
+    - validation = 3222 samples
+    - test = 3236 samples
