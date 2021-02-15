@@ -249,7 +249,7 @@ def load_data(data_directory, mode='train'):
 
     discretizer = Discretizer(timestep=float(1), store_masks=True, start_time='zero')
 
-    normalizer_state = './re_written_scripts/support_files/normalizer_file.normalizer'
+    normalizer_state = './support_files/normalizer_file.normalizer'
 
     discretizer_header = discretizer.transform(reader.read_example(0)["X"])[1].split(',')
     cont_channels = [i for (i, x) in enumerate(discretizer_header) if x.find("->") == -1]
