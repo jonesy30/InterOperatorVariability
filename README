@@ -1,10 +1,6 @@
 Repository contains code for converting MIMIC-III data into data which can be read in by a machine learning model.
 Please note, this code has been written for a Windows machine. Linux or Mac users may need to change directions of \'s in filepaths
 
-REQUIREMENTS
-pandas version 0.23.4 -- THIS VERSION SPECIFICALLY
-    - earlier and later versions may cause an integer OverFlow exception
-
 TO RUN
 run (from command line)
     python process_mimic.py [path_to_mimic_data]
