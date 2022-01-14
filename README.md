@@ -1,6 +1,10 @@
 Repository contains code for converting MIMIC-III data into data which can be read in by a machine learning model.
 Please note, this code has been written for a Windows machine. Linux or Mac users may need to change directions of \'s in filepaths
 
+This code is based off the work by Harutyunyan, et al., Multitask learning and benchmarking with clinical time series data, https://doi.org/10.1038/s41597-019-0103-9
+
+For the original code on GitHub, please refer to their repository: https://github.com/YerevaNN/mimic3-benchmarks
+
 TO RUN
 run (from command line)
     python process_mimic.py [path_to_mimic_data]
@@ -34,7 +38,3 @@ process_files
     - Scripts which are called from process_mimic.py
 support_files
     - Files which are used by process_mimic (normalizer files, test set definitions, etc)
-
-DISCLAIMER: the code in this repository has been taken from the github below. If you're a study participant, please don't look at this! The github contains
-code for creating their network models which could skew the results of this study
-https://github.com/YerevaNN/mimic3-benchmarks
